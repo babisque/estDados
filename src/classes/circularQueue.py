@@ -1,6 +1,5 @@
 from queue import Empty
 
-
 class CircularQueue:
     capacity = 10;
 
