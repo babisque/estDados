@@ -1,5 +1,6 @@
-from src.person import Person;
+from src.classes.student import Student;
 
-pessoa = Person("Rodrigo", 22);
+student = Student("Kawan", "20220920LUCASGAY");
 
-pessoa.exibeDados();
+print(student);
+print(student.averageCalculate());
