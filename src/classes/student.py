@@ -1,5 +1,3 @@
-import numpy as np;
-
 class Student:
     name = "";
     enrollment = "";
@@ -12,13 +10,15 @@ class Student:
     def __init__(self, name, enrollment):
         self.name = name;
         self.enrollment = enrollment;
-        self.g1 = np.random.randint(11);
-        self.g2 = np.random.randint(11);
-        self.g3 = np.random.randint(11);
+
+    def storeGrade(self, n1, n2, n3):
+        self.g1 = n1;
+        self.g2 = n2;
+        self.g3 = n3;
         self.grade = self.g1, self.g2, self.g3;
 
     def averageCalculate(self):
-        return "The student {}'s average is {:.2f}.".format(self.name, (self.g1 + self.g2 + self.g3)/3);
+        return "A média do {} é {:.2f}.".format(self.name, (self.g1 + self.g2 + self.g3)/3);
 
     def __str__(self):
-        return "Student: {}\nEnrollment: {}\nGrade: {}".format(self.name, self.enrollment, self.grade);
+        return "Estudante: {}\nMatrícula: {}\nNotas: {}".format(self.name, self.enrollment, self.grade);
